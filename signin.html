@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="app.css">
+    <script>
+        function display() {
+            var fname = document.getElementById('username');
+            var fpassword = document.getElementById('password');
+            var femail = document.getElementById('email');
+            var fage = document.getElementById('num');
+            if (fname.value == "" || fpassword.value == "" || femail.value == "" || fage.value < "18") {
+                alert("INVALID INPUT");
+                return false;
+            }
+            else { true; }
+        } </script>
+</head>
+
+<body>
+    <h1>SIGN IN</h1>
+    <ul>
+        <form onsubmit="return display()" action="after_signin.html">
+
+            <li>
+                <label for="username">enter your username :</label>
+                <input type="text" placeholder="username" id="username" name="name">
+            </li>
+            <li>
+                <label for="password">create your password :</label>
+                <input type="password" placeholder="password" id="password" name="password">
+            </li>
+
+            <li>
+                <label for="email">enter your email :</label>
+                <input type="email" id="email" name="e" placeholder="abc@gmail.com">
+            </li>
+            <li>
+                <label for="num">enter your age :</label>
+                <input type="number" placeholder="18 PLUS" id="num" name="number" min="1" max="100">
+            </li>
+            <li>
+                <label for="chk">I AGREE TO THE TERMS AND CONDITIONS</label>
+                <input type="checkbox" id="chk" checked>
+            </li>
+            <button type="submit">submit</button>
+
+        </form>
+    </ul>
+
+</html>
